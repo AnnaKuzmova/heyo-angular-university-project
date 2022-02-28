@@ -12,5 +12,8 @@
       {{ post?.description }}
     </p>
   </div>
-  
+  <div class="post-actions" *ngIf="userInfo?.id === loggedUser?.id">
+    <button (click)="handleDelete()">delete</button>
+    <button>edit</button>
+  </div>
 </article>

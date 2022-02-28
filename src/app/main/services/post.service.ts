@@ -14,4 +14,12 @@ export class PostService {
   getAllGroupPosts$(groupId: number): Observable<Post[]> {
     return this.http.get<Post[]>(`${this.postUrl}?groupId=${groupId}`);
   }
+
+  createPost$(post: Post): Observable<Post> {
+    return this.http.post<Post>(`${this.postUrl}`, post)
+  }
+
+  deletePost$(id:number):Observable<any> {
+    return this.http.delete(`${this.postUrl}/${id}`);
+  }
 }

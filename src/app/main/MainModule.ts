@@ -11,6 +11,8 @@ import { CreateEditPageComponent } from './pages/group-page/create-edit-page/cre
 import { DashboardPageComponent } from './pages/dashboard-page/dashboard-page.component';
 import { GroupPageComponent } from './pages/group-page/group-page.component';
 import { ProfilePageComponent } from './pages/profile-page/profile-page.component';
+import { DeleteGroupModalComponent } from './components/delete-group-modal/delete-group-modal.component';
+import { CreatePostModalComponent } from './components/create-post-modal/create-post-modal.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +20,7 @@ import { ProfilePageComponent } from './pages/profile-page/profile-page.componen
     DashboardPageComponent,
     GroupPageComponent,
     CreateEditPageComponent,
+    DeleteGroupModalComponent
   ],
   imports: [
     MainRoutingModule,

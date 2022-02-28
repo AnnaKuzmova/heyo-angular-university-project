@@ -1,0 +1,41 @@
+<div class="modal-overlay" *ngIf="open">
+    <section class="modal-content modal-open">
+      <h3>Create post</h3>
+      <form *ngIf="postForm"
+      [formGroup]="postForm"
+      (ngSubmit)="handleSubmitForm()">
+        <div class="input-group">
+            <label >Title:</label>
+            <input type="text" placeholder="Title.." formControlName="title" />
+            <div class="error-message">
+                <small
+                  *ngIf="title?.invalid && title?.touched && title?.hasError('required')"
+                  >Title is required.</small
+                >
+                <small
+                *ngIf="title?.invalid && title?.touched && title?.hasError('minlength')"
+                >Title must be at least 5 characters.</small
+              >
+              </div>
+            </div>
+          <div class="input-group">
+            <label for="description">Description</label>
+            <textarea placeholder="Description.." formControlName="description"></textarea>
+            <div class="error-message">
+                <small
+                  *ngIf="description?.invalid && description?.touched && description?.hasError('required')"
+                  >Description is required.</small
+                >
+                <small
+                *ngIf="description?.invalid && description?.touched && description?.hasError('minlength')"
+                >Description must be at least 10 characters.</small
+              >
+              </div>
+            </div>
+          <div class="modal-actions">
+           <button>cancel</button>
+           <button type="submit">create</button>
+          </div>
+      </form>
+    </section>
+  </div>

@@ -17,6 +17,7 @@ export class GroupPageComponent implements OnInit {
   @Input() open!: boolean;
   group: GroupModel | null = null;
   isOpen: boolean = false;
+  isCreatePostModalOpen:boolean = false;
   posts: Post[] | null = null;
   constructor(
     private authService: AuthService,
@@ -46,21 +47,47 @@ export class GroupPageComponent implements OnInit {
       });
   }
 
-  openModal(): void {
+  openDeleteModal(): void {
     this.isOpen = true;
   }
 
-  closeModal(): void {
+  closeDeleteModal(): void {
     this.isOpen = false;
   }
 
+  openCreatePostModal():void {
+    this.isCreatePostModalOpen = true;
+  }
+
+  closeCreatePostModal():void {
+    this.isCreatePostModalOpen = false;
+  }
+
+  createPost(post: Post):void {
+    this.postService.createPost$(post).pipe(take(1)).subscribe({
+      next: (response) => console.log(response),
+      error: (error) => console.log(error)
+    })
+  }
+
+
   deleteGroup(): void {
-    this.groupService.deleteGroup$(this.group!.id as number).subscribe({
+    this.groupService.deleteGroup$(this.group!.id as number).pipe(take(1)).subscribe({
       next: () => {
         this.router.navigate(['/dashboard']);
         this.alertService.success('Successfully deleted group.');
       },
       error: () => this.alertService.danger('Error occured when deleting group.'),
     });
+  }
+
+  deletePost(id: number):void {
+    this.postService.deletePost$(id).pipe(take(1)).subscribe({
+      next: () =>  {
+        this.posts = this.posts!.filter(post => post.id !== id);
+        this.alertService.success('Successfully removed post');
+      },
+      error: () => this.alertService.danger('Error occured when deleting a post.')
+    })
   }
 }
