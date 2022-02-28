@@ -1,0 +1,39 @@
+<form
+  class="form"
+  *ngIf="loginForm"
+  [formGroup]="loginForm"
+  (ngSubmit)="handleSubmit()"
+>
+  <img src="../../../../assets/images/bear.png" alt="bear.png" />
+  <h3>Login</h3>
+  <div class="input-group">
+    <label for="email">Email</label>
+    <input type="text" placeholder="Username.." formControlName="email" />
+    <div class="error-message">
+      <small
+        *ngIf="email?.invalid && email?.touched && email?.hasError('required')"
+        >Email is required field</small
+      >
+    </div>
+  </div>
+  <div class="input-group">
+    <label for="password">Password</label>
+    <input type="text" placeholder="Password.." formControlName="password" />
+    <div class="error-message">
+      <small
+        *ngIf="
+          password?.invalid &&
+          password?.touched &&
+          password?.hasError('required')
+        "
+        >Password is required field</small
+      >
+    </div>
+  </div>
+  <div class="error-message" *ngIf="errorMessage">
+    <small>
+      {{ errorMessage }}
+    </small>
+  </div>
+  <input type="submit" />
+</form>

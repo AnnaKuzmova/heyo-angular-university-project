@@ -1,0 +1,51 @@
+<div class="container">
+  <section class="profile-section">
+    <div class="image-container">
+      <img
+        src="https://images.unsplash.com/photo-1644968521000-44881206b737?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw1NHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60"
+        alt="random-image"
+      />
+    </div>
+    <div class="user-information-container">
+      <form *ngIf="userForm" [formGroup]="userForm" (ngSubmit)="handleSubmit()">
+        <fieldset class="form-group">
+          <label for="">Username</label>
+          <input
+            type="text"
+            formControlName="username"
+            [disableControl]="isDisabled"
+          />
+          <small
+            *ngIf="
+              username?.invalid &&
+              username?.touched &&
+              username?.hasError('minlength')
+            "
+            >Username is too short</small
+          >
+        </fieldset>
+        <fieldset class="form-group">
+          <label>Email</label>
+          <input
+            type="text"
+            formControlName="email"
+            [disableControl]="isDisabled"
+          />
+          <small
+            *ngIf="email?.invalid && email?.touched && email?.hasError('email')"
+            >Incorrect email format</small
+          >
+        </fieldset>
+        <button
+          class="edit-button"
+          *ngIf="isDisabled"
+          (click)="isDisabled = !isDisabled"
+        >
+          Edit
+        </button>
+        <input type="submit" value="Save" *ngIf="!isDisabled" />
+      </form>
+      <p *ngIf="!!errorMessage">{{ errorMessage }}</p>
+    </div>
+  </section>
+</div>

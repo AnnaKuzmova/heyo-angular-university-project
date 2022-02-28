@@ -1,0 +1,79 @@
+@import "../../../../styles.scss";
+
+.landing-page {
+  height: 100vh;
+  @include flex(space-between, center, column);
+  & > * {
+    width: 100vw;
+  }
+}
+
+.container {
+  @include container();
+}
+
+header {
+  nav.container {
+    @include flex();
+    padding: 1rem 0;
+    h3 {
+      font-size: 1.5rem;
+    }
+
+    ul {
+      list-style: none;
+      li {
+        display: inline-block;
+        margin-right: 1em;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.landing-main {
+  padding: 8em 0;
+  margin-bottom: 6em;
+  div.container {
+    @include flex();
+    .landing-text {
+      align-self: flex-start;
+      width: 40%;
+      text-align: center;
+      h2 {
+        margin-bottom: 0.5em;
+        font-size: 3.5rem;
+        color: rgb(130, 133, 0);
+        span {
+          font-size: inherit;
+          color: rgb(197, 200, 6);
+        }
+      }
+
+      p:last-of-type {
+        margin-bottom: 1em;
+      }
+    }
+    .landing-image {
+      flex: 1;
+      img {
+        display: block;
+        width: 50%;
+        margin: 0 auto;
+      }
+    }
+  }
+}
+
+.landing-footer {
+  padding: 1.4rem 0;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  section {
+    text-align: center;
+    h3 {
+      font-size: 1.6rem;
+      color: rgb(130, 133, 0);
+      text-transform: uppercase;
+    }
+  }
+}

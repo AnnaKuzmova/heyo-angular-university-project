@@ -1,0 +1,42 @@
+<div class="container" *ngIf="group">
+  <section class="group-page-header">
+    <div>
+      <h3>{{ group?.name }}</h3>
+      <section>
+        <app-button-component [btnType]="'btn-primary'"
+          >add post</app-button-component
+        >
+        <app-button-component
+          [btnType]="'btn-secondary'"
+          (onClick)="openModal()"
+          >delete group</app-button-component
+        >
+      </section>
+    </div>
+    <p>
+      {{ group.description }}
+    </p>
+  </section>
+  <section class="group-posts-container">
+    <div *ngIf="posts">
+      <app-post *ngFor="let post of posts" [post]="post"></app-post>
+    </div>
+  </section>
+</div>
+
+<div *ngIf="!group" class="no-content">
+  <app-preview-component></app-preview-component>
+  <app-button-component [btnType]="'btn-primary'"
+    ><a
+      [ngStyle]="{ color: 'white', 'text-decoration': 'none' }"
+      routerLink="create"
+      >Create Group</a
+    ></app-button-component
+  >
+</div>
+
+<app-delete-group-modal
+  [open]="isOpen"
+  (onCancel)="closeModal()"
+  (onDelete)="deleteGroup()"
+></app-delete-group-modal>

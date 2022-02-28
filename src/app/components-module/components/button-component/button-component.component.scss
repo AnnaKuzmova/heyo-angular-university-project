@@ -1,0 +1,30 @@
+@import "../../../../styles.scss";
+
+button {
+  padding: 0.5rem 0.7rem;
+  text-transform: uppercase;
+  background-color: transparent;
+  border: none;
+  border-radius: 11px;
+  cursor: pointer;
+  &.btn-primary {
+    color: $white-text-color;
+    background-color: $primary-yellow;
+    transition: 0.3s all ease-out;
+    &:hover {
+      background-color: $secondary-yellow;
+      transition: 0.3s all ease-out;
+    }
+  }
+  &.btn-secondary {
+    color: $primary-yellow;
+    border: $primary-yellow 1px solid;
+    background-color: white;
+    transition: 0.3s all ease-out;
+    &:hover {
+      background-color: $secondary-yellow;
+      color: white;
+      transition: 0.3s all ease-out;
+    }
+  }
+}

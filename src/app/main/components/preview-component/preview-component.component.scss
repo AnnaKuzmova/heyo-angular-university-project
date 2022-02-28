@@ -1,0 +1,15 @@
+@import "../../../../styles.scss";
+.preview {
+  margin-top: 10em;
+  @include flex(center, center);
+  section {
+    text-align: center;
+    img {
+      display: inline-block;
+      width: 40%;
+    }
+    p {
+      font-size: 2rem;
+    }
+  }
+}

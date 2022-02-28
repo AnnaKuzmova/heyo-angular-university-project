@@ -1,0 +1,17 @@
+<header>
+  <nav class="container">
+    <h3><a routerLink="/dashboard">Heyo</a></h3>
+    <ul>
+      <li><a routerLink="profile">My Profile</a></li>
+      <li><a routerLink="group">My Group</a></li>
+      <li><a>All Groups</a></li>
+    </ul>
+
+    <section>
+      <app-button-component [btnType]="'btn-secondary'" (onClick)="onLogout()"
+        >Logout</app-button-component
+      >
+    </section>
+  </nav>
+</header>
+<router-outlet></router-outlet>

@@ -1,0 +1,27 @@
+@import "../../../../styles.scss";
+$colors: (("success", $success), ("danger", $danger), ("warning", $warning));
+
+.alert {
+  position: fixed;
+  top: 8%;
+  left: 50%;
+  right: 50%;
+  transform: translate(-50%, -50%);
+  width: fit-content;
+  padding: 1rem 1.3rem;
+  border-radius: 3px;
+  color: $white-text-color;
+  font-weight: 500;
+  text-transform: capitalize;
+  z-index: 1000;
+  @each $name, $color in $colors {
+    &.#{$name} {
+      background-color: $color;
+      transition: all 0.3s ease-in-out;
+      &:hover {
+        background-color: lighten($color, 5%);
+        transition: all 0.3s ease-in-out;
+      }
+    }
+  }
+}

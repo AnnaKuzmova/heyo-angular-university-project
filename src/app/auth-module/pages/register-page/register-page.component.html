@@ -1,0 +1,92 @@
+<form class="form" [formGroup]="registerForm" (ngSubmit)="handleSubmit()">
+  <img src="../../../../assets/images/bear.png" alt="bear.png" />
+  <h3>Register</h3>
+  <div class="input-group">
+    <label for="email">Email</label>
+    <input type="text" placeholder="Email.." formControlName="email" />
+    <div class="error-message">
+      <small
+        *ngIf="email?.invalid && email?.touched && email?.hasError('required')"
+        >Email is required field</small
+      >
+      <small
+        *ngIf="email?.invalid && email?.touched && email?.hasError('email')"
+        >Incorrect email format</small
+      >
+    </div>
+  </div>
+  <div class="input-group">
+    <label for="username">Username</label>
+    <input type="text" placeholder="Username.." formControlName="username" />
+    <div class="error-message">
+      <small
+        *ngIf="
+          username?.invalid &&
+          username?.touched &&
+          username?.hasError('required')
+        "
+        >Username is required field</small
+      >
+      <small
+        *ngIf="
+          username?.invalid &&
+          username?.touched &&
+          username?.hasError('minlength')
+        "
+        >Username length is too short</small
+      >
+    </div>
+  </div>
+  <div class="input-group">
+    <label for="password">Password</label>
+    <input type="text" placeholder="Password.." formControlName="password" />
+    <div class="error-message">
+      <small
+        *ngIf="
+          password?.invalid &&
+          password?.touched &&
+          password?.hasError('required')
+        "
+        >Password is required field</small
+      >
+      <small
+        *ngIf="
+          password?.invalid &&
+          password?.touched &&
+          password?.hasError('minlength')
+        "
+        >Password length is too short</small
+      >
+    </div>
+  </div>
+  <div class="input-group">
+    <label for="confirm-password">Confirm password</label>
+    <input
+      type="text"
+      placeholder="Confirm password.."
+      formControlName="confirmPassword"
+    />
+    <div class="error-message">
+      <small
+        *ngIf="
+          confirmPassword?.invalid &&
+          confirmPassword?.touched &&
+          confirmPassword?.hasError('required')
+        "
+        >Please, confirm your password</small
+      >
+      <small
+        *ngIf="
+          confirmPassword?.touched &&
+          registerForm.hasError('passwordsDoNotMatch')
+        "
+      >
+        Passwords do not match
+      </small>
+    </div>
+  </div>
+  <div class="error-message" *ngIf="errorMessage">
+    <small>{{ errorMessage }}</small>
+  </div>
+  <input type="submit" />
+</form>

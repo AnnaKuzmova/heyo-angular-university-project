@@ -1,0 +1,30 @@
+@import "../../../../styles.scss";
+
+.container {
+  @include container();
+}
+
+.group-page-header {
+  margin-top: 3em;
+  div {
+    @include flex();
+    h3 {
+      font-size: 2rem;
+      font-weight: 500;
+    }
+
+    section {
+      @include flex();
+      gap: 10px;
+    }
+  }
+  p {
+    padding: 2rem 0;
+    border-bottom: 1px solid grey;
+  }
+}
+
+.no-content {
+  @include flex(center, center, column);
+  gap: 20px;
+}

@@ -1,0 +1,15 @@
+<article class="post">
+  <div class="user-section">
+    <img [src]="userInfo?.imageUrl" alt="profile picture" />
+    <section>
+      <h4>{{ userInfo?.username }}</h4>
+      <p>{{ post?.createdAt }}</p>
+    </section>
+  </div>
+  <div class="post-content">
+    <h3>{{ post?.title }}</h3>
+    <p>
+      {{ post?.description }}
+    </p>
+  </div>
+</article>

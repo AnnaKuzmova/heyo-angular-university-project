@@ -1,0 +1,44 @@
+<div class="landing-page">
+  <header>
+    <nav class="container">
+      <h3>Heyo!</h3>
+      <ul>
+        <li><a routerLink="/login">Login</a></li>
+        <li><a routerLink="/register">Register</a></li>
+        <app-button-component [btnType]="'btn-primary'"
+          >Checkout</app-button-component
+        >
+      </ul>
+    </nav>
+  </header>
+  <main class="landing-main">
+    <div class="container">
+      <section class="landing-text">
+        <h2>Welcome to <span>HeyoTeams</span></h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis,
+          voluptas. Atque suscipit vero accusantium vitae magnam maxime sunt,
+          cumque sed ducimus eveniet culpa cum, quia, repellat amet blanditiis
+          libero odit.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis,
+          voluptas. Atque suscipit vero accusantium vitae magnam maxime sunt,
+          cumque sed ducimus eveniet culpa cum, quia, repellat amet blanditiis
+          libero odit.
+        </p>
+        <app-button-component [btnType]="'btn-primary'"
+          >Get statred</app-button-component
+        >
+      </section>
+      <section class="landing-image">
+        <img src="../../../../assets/images/hello.png" alt="hello.png" />
+      </section>
+    </div>
+  </main>
+  <footer class="landing-footer">
+    <section class="container">
+      <p>All rights reserved &copy;2022</p>
+    </section>
+  </footer>
+</div>

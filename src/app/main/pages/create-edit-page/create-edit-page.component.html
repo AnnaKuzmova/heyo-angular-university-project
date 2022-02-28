@@ -1,0 +1,43 @@
+<div
+  *ngIf="groupForm"
+  [formGroup]="groupForm"
+  class="container"
+  (ngSubmit)="handleSubmit()"
+>
+  <h3>Create your own group</h3>
+  <form>
+    <div class="form-control">
+      <label for="name">Name:</label>
+      <input type="text" id="name" formControlName="name" />
+      <small
+        class="error-message"
+        *ngIf="name?.touched && name?.hasError('required')"
+      >
+        Name is a required field.
+      </small>
+      <small
+        class="error-message"
+        *ngIf="name?.touched && name?.hasError('minlength')"
+      >
+        Name is too short.
+      </small>
+    </div>
+    <div class="form-control">
+      <label for="description">Description:</label>
+      <textarea id="description" formControlName="description"></textarea>
+      <small
+        class="error-message"
+        *ngIf="description?.touched && description?.hasError('required')"
+      >
+        Description is a required field.
+      </small>
+      <small
+        class="error-message"
+        *ngIf="description?.touched && description?.hasError('minlength')"
+      >
+        Description is too short.
+      </small>
+    </div>
+    <input type="submit" />
+  </form>
+</div>

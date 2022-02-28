@@ -1,0 +1,46 @@
+@import "../../../../styles.scss";
+
+.container {
+  @include container();
+}
+
+header {
+  margin-bottom: 1.5em;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+nav.container {
+  @include flex(_);
+  gap: 20px;
+  padding: 1rem 0;
+  h3 {
+    a {
+      font-size: 1.5rem;
+      text-decoration: none;
+      color: unset;
+    }
+  }
+
+  ul {
+    list-style: none;
+    li {
+      display: inline-block;
+      margin-right: 1em;
+      cursor: pointer;
+      a {
+        font-weight: bold;
+        transition: all 0.1s linear;
+        &:hover {
+          color: $secondary-yellow;
+          transition: all 0.1s linear;
+        }
+      }
+    }
+  }
+
+  section {
+    margin-left: auto;
+    @include flex();
+    gap: 10px;
+  }
+}

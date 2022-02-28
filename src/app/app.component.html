@@ -1,0 +1,6 @@
+<app-alert-component
+  *ngIf="alert"
+  [type]="alert?.type"
+  [message]="alert?.message"
+></app-alert-component>
+<router-outlet></router-outlet>

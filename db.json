@@ -1,0 +1,64 @@
+{
+  "users": [
+    {
+      "id": 0,
+      "username": "ansii",
+      "email": "ani@abv.bg",
+      "password": "1234",
+      "imageUrl": "https://images.unsplash.com/photo-1577980906127-4ea7faa2c6f0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80"
+    },
+    {
+      "id": 1,
+      "username": "sashko",
+      "email": "sashko@abv.bg",
+      "password": "1234",
+      "imageUrl": "https://images.unsplash.com/photo-1587354004405-bbce24c893c8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80"
+    }
+  ],
+  "groups": [
+    {
+      "name": "My new super cool group bitches",
+      "description": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+      "admin": 0,
+      "members": [],
+      "id": 1
+    }
+  ],
+  "posts": [
+    {
+      "groupId": 1,
+      "title": "Of be",
+      "description": "Meh, some description I guess, dunno really",
+      "createdAt": "21st Mat, 17:09",
+      "createdBy": 1
+    },
+    {
+      "groupId": 1,
+      "title": "Of be",
+      "description": "Meh, some description I guess, dunno really",
+      "createdAt": "21st Mat, 17:09",
+      "createdBy": 1
+    },
+    {
+      "groupId": 1,
+      "title": "Of be",
+      "description": "Meh, some description I guess, dunno really",
+      "createdAt": "21st Mat, 17:09",
+      "createdBy": 0
+    },
+    {
+      "groupId": 1,
+      "title": "Of be",
+      "description": "Meh, some description I guess, dunno really",
+      "createdAt": "21st Mat, 17:09",
+      "createdBy": 0
+    },
+    {
+      "groupId": 1,
+      "title": "Of be",
+      "description": "Meh, some description I guess, dunno really",
+      "createdAt": "21st Mat, 17:09",
+      "createdBy": 0
+    }
+  ]
+}
