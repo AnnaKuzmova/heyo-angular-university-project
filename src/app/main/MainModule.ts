@@ -7,7 +7,7 @@ import { RouterModule } from '@angular/router';
 import { AuthModule } from '../auth-module/AuthModule';
 import { ComponentsModule } from '../components-module/ComponentsModule';
 import { MainRoutingModule } from './main-routing.module';
-import { CreateEditPageComponent } from './pages/create-edit-page/create-edit-page.component';
+import { CreateEditPageComponent } from './pages/group-page/create-edit-page/create-edit-page.component';
 import { DashboardPageComponent } from './pages/dashboard-page/dashboard-page.component';
 import { GroupPageComponent } from './pages/group-page/group-page.component';
 import { ProfilePageComponent } from './pages/profile-page/profile-page.component';

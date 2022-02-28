@@ -55,9 +55,9 @@ export class CreateEditPageComponent implements OnInit {
       .subscribe({
         next: () => {
           this.router.navigate(['/dashboard/group']);
-          this.alertService.success();
+          this.alertService.success('Successfully created group.');
         },
-        error: () => this.alertService.danger(),
+        error: () => this.alertService.danger('Error occured while creating new group.'),
       });
   }
 }

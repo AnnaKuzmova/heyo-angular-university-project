@@ -58,9 +58,9 @@ export class GroupPageComponent implements OnInit {
     this.groupService.deleteGroup$(this.group!.id as number).subscribe({
       next: () => {
         this.router.navigate(['/dashboard']);
-        this.alertService.success();
+        this.alertService.success('Successfully deleted group.');
       },
-      error: () => this.alertService.danger(),
+      error: () => this.alertService.danger('Error occured when deleting group.'),
     });
   }
 }

@@ -40,7 +40,7 @@ const routes: Routes = [
       import('./auth-module/auth-routing.module').then(
         (m) => m.AuthRountingModule
       ),
-    canLoad: [NonAuthGuard],
+    canLoad: [],
   },
   {
     path: 'dashboard',

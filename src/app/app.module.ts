@@ -12,7 +12,7 @@ import { GroupPageComponent } from './main/pages/group-page/group-page.component
 import { PostComponent } from './main/components/post/post.component';
 import { DeleteGroupModalComponent } from './main/components/delete-group-modal/delete-group-modal.component';
 import { PreviewComponentComponent } from './main/components/preview-component/preview-component.component';
-import { CreateEditPageComponent } from './main/pages/create-edit-page/create-edit-page.component';
+import { CreateEditPageComponent } from './main/pages/group-page/create-edit-page/create-edit-page.component';
 import { ComponentsModule } from './components-module/ComponentsModule';
 import { AuthModule } from './auth-module/AuthModule';
 

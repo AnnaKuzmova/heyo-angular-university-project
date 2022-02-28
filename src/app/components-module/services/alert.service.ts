@@ -13,16 +13,16 @@ export class AlertSerice {
     return this.subject.asObservable();
   }
 
-  success(): void {
-    this.alert({ type: AlertTypes.success, message: 'Wohooo' });
+  success(msg: string): void {
+    this.alert({ type: AlertTypes.success, message: msg });
   }
 
-  warning(): void {
-    this.alert({ type: AlertTypes.warning, message: 'Be aware' });
+  warning(msg: string): void {
+    this.alert({ type: AlertTypes.warning, message: msg });
   }
 
-  danger(): void {
-    this.alert({ type: AlertTypes.danger, message: 'Ooops!' });
+  danger(msg: string): void {
+    this.alert({ type: AlertTypes.danger, message: msg });
   }
 
   clearAlert(): void {

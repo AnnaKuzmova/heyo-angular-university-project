@@ -63,46 +63,7 @@ form.form {
     margin-bottom: 1em;
     font-size: 2rem;
   }
-  .input-group {
-    margin-bottom: 1.5em;
-    label {
-      display: block;
-      text-align: left;
-    }
-    input {
-      display: block;
-      width: 100%;
-      padding: 0.5em 0;
-      border: none;
-      border-bottom: 1px solid $secondary-yellow;
-      border-radius: 3px;
-      transition: all 0.3s linear;
-      &:active {
-        border: 1px solid $secondary-yellow;
-        outline: none;
-        box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px,
-          rgba(17, 17, 26, 0.1) 0px 0px 8px;
-        transition: all 0.3s linear;
-      }
-      &:focus {
-        border: 1px solid $secondary-yellow;
-        outline: none;
-        box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px,
-          rgba(17, 17, 26, 0.1) 0px 0px 8px;
-        transition: all 0.3s linear;
-      }
-    }
-  }
-
-  .error-message {
-    color: $primary-danger;
-    text-transform: capitalize;
-    small {
-      display: block;
-      margin-bottom: 0.5em;
-    }
-  }
-
+  
   input[type="submit"] {
     padding: 0.5em 1em;
     font-size: 1.4rem;
@@ -111,5 +72,44 @@ form.form {
     border: none;
     border-radius: 18px;
     cursor: pointer;
+  }
+}
+
+.input-group {
+  margin-bottom: 1.5em;
+  label {
+    display: block;
+    text-align: left;
+  }
+  input, textarea {
+    display: block;
+    width: 100%;
+    padding: 0.5em;
+    border-radius: 3px;
+    border: 1px solid rgb(161, 161, 161);
+    border-radius: 3px;
+    transition: all 0.3s linear;
+    resize: none;
+    &:active {
+      border: 1px solid $secondary-yellow;
+      outline: none;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+      transition: all 0.3s linear;
+    }
+    &:focus {
+      outline: none;
+      border: 1px solid $secondary-yellow;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+      transition: all 0.3s linear;
+    }
+  }
+}
+
+.error-message {
+  color: $primary-danger;
+  text-transform: capitalize;
+  small {
+    display: block;
+    margin-bottom: 0.5em;
   }
 }
