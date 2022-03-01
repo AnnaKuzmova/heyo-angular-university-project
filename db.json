@@ -2,7 +2,7 @@
   "users": [
     {
       "id": 0,
-      "username": "ansii",
+      "username": "ansiihhgh",
       "email": "ani@abv.bg",
       "password": "1234",
       "imageUrl": "https://images.unsplash.com/photo-1577980906127-4ea7faa2c6f0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80"
@@ -26,6 +26,7 @@
   ],
   "posts": [
     {
+      "id": 0,
       "groupId": 1,
       "title": "Of be",
       "description": "Meh, some description I guess, dunno really",
@@ -33,6 +34,7 @@
       "createdBy": 1
     },
     {
+      "id": 1,
       "groupId": 1,
       "title": "Of be",
       "description": "Meh, some description I guess, dunno really",
@@ -40,25 +42,12 @@
       "createdBy": 1
     },
     {
+      "title": "Aniiiiiiiiiiiiiii",
+      "description": "sjaidjifjeoijdwoihqoihsqoihowdhfow",
+      "createdAt": "2/3/2022",
+      "createdBy": 0,
       "groupId": 1,
-      "title": "Of be",
-      "description": "Meh, some description I guess, dunno really",
-      "createdAt": "21st Mat, 17:09",
-      "createdBy": 0
-    },
-    {
-      "groupId": 1,
-      "title": "Of be",
-      "description": "Meh, some description I guess, dunno really",
-      "createdAt": "21st Mat, 17:09",
-      "createdBy": 0
-    },
-    {
-      "groupId": 1,
-      "title": "Of be",
-      "description": "Meh, some description I guess, dunno really",
-      "createdAt": "21st Mat, 17:09",
-      "createdBy": 0
+      "id": 2
     }
   ]
 }

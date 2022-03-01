@@ -64,9 +64,16 @@ export class GroupPageComponent implements OnInit {
   }
 
   createPost(post: Post):void {
-    this.postService.createPost$(post).pipe(take(1)).subscribe({
-      next: (response) => console.log(response),
-      error: (error) => console.log(error)
+    this.postService.createPost$({...post, createdAt: `${new Date().getDay()}/${new Date().getMonth() + 1}/${new Date().getFullYear()}`, createdBy: this.authService.getLoggedUser()?.id, groupId: this.group?.id as number}).pipe(take(1)).subscribe({
+      next: (response) => {
+        this.posts?.push(response);
+        this.closeCreatePostModal();
+        this.alertService.success('Successfully created new post.');
+      },
+      error: () => {
+        this.closeCreatePostModal();
+        this.alertService.danger('Error occured when creating new post.')
+      }
     })
   }
 

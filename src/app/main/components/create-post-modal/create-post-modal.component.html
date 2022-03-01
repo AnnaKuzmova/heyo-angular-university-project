@@ -33,8 +33,16 @@
               </div>
             </div>
           <div class="modal-actions">
-           <button>cancel</button>
-           <button type="submit">create</button>
+            <app-button-component
+            [btnType]="'btn-secondary'"
+            (onClick)="handleClose()"
+            >Cancel</app-button-component
+          >
+          <app-button-component
+            [btnType]="'btn-primary'"
+            (onClick)="handleSubmitForm()"
+            >Confirm</app-button-component
+          >
           </div>
       </form>
     </section>

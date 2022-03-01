@@ -12,7 +12,11 @@ export class PostService {
   constructor(private http: HttpClient) {}
 
   getAllGroupPosts$(groupId: number): Observable<Post[]> {
-    return this.http.get<Post[]>(`${this.postUrl}?groupId=${groupId}`);
+    return this.http.get<Post[]>(`${this.postUrl}?groupId=${groupId}` );
+  }
+
+  getPost$(id:number):Observable<Post> {
+    return this.http.get<Post>(`${this.postUrl}/${id}`);
   }
 
   createPost$(post: Post): Observable<Post> {

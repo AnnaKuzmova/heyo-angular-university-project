@@ -15,6 +15,7 @@ import { PreviewComponentComponent } from './main/components/preview-component/p
 import { CreateEditPageComponent } from './main/pages/group-page/create-edit-page/create-edit-page.component';
 import { ComponentsModule } from './components-module/ComponentsModule';
 import { AuthModule } from './auth-module/AuthModule';
+import { CreatePostModalComponent } from './main/components/create-post-modal/create-post-modal.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { AuthModule } from './auth-module/AuthModule';
     DeleteGroupModalComponent,
     PreviewComponentComponent,
     CreateEditPageComponent,
+    CreatePostModalComponent,
   ],
   imports: [
     BrowserModule,

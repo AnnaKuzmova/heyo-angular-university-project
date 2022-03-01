@@ -5,15 +5,23 @@
       <h4>{{ userInfo?.username }}</h4>
       <p>{{ post?.createdAt }}</p>
     </section>
-  </div>
-  <div class="post-content">
-    <h3>{{ post?.title }}</h3>
-    <p>
-      {{ post?.description }}
-    </p>
-  </div>
-  <div class="post-actions" *ngIf="userInfo?.id === loggedUser?.id">
-    <button (click)="handleDelete()">delete</button>
-    <button>edit</button>
-  </div>
+</div>
+<form 
+[formGroup]="postForm">
+<div class="post-content">
+    <div class="input-group">
+      <label >Title:</label>
+      <input type="text" placeholder="Title.." formControlName="title" [disableControl]="idDisabled" />
+    </div>
+    <div class="input-group">
+      <label for="description">Description</label>
+      <textarea placeholder="Description.." formControlName="description" [disableControl]="idDisabled"></textarea>
+    </div>
+</div>
+<div class="post-actions" *ngIf="userInfo?.id === loggedUser?.id">
+  <button (click)="handleDelete()" type="button">delete</button>
+  <button>edit</button>
+</div>
+</form>
+
 </article>

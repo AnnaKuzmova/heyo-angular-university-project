@@ -35,6 +35,7 @@ export class CreatePostModalComponent implements OnInit {
 
   handleClose():void {
     this.onClose.emit();
+    this.postForm.reset();
   }
 
   handleSubmitForm():void {
